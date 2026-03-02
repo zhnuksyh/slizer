@@ -2,7 +2,7 @@ import type { Slide } from '../types';
 
 export const generateSlidesFromAI = async (inputText: string): Promise<Slide[]> => {
     const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
     const systemInstruction = `
     You are an expert presentation designer. Convert the user's raw text into a structured presentation.
