@@ -17,17 +17,14 @@ export const ApiUsageMonitor = () => {
         };
 
         window.addEventListener('storage', handleStorageChange);
+        window.addEventListener('api-usage-updated', handleStorageChange);
 
         return () => {
             clearInterval(interval);
             window.removeEventListener('storage', handleStorageChange);
+            window.removeEventListener('api-usage-updated', handleStorageChange);
         };
     }, []);
-
-    // Force an update when this component re-renders (like right after a generation)
-    useEffect(() => {
-        setUsage(getApiUsageStatus());
-    });
 
     const rpmPercent = Math.min((usage.usedLastMinute / usage.maxRpm) * 100, 100);
     const dailyPercent = Math.min((usage.usedToday / usage.maxDaily) * 100, 100);

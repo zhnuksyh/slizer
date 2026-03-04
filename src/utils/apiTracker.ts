@@ -83,6 +83,7 @@ export const recordApiCall = (): void => {
         timestamps = timestamps.filter(ts => ts > oneDayAgo);
 
         localStorage.setItem(STORAGE_KEY, JSON.stringify(timestamps));
+        window.dispatchEvent(new Event('api-usage-updated'));
     } catch (e) {
         console.error("Failed to save API usage data", e);
     }
