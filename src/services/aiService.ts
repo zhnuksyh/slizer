@@ -28,6 +28,17 @@ export const generateSlidesFromAI = async (inputText: string): Promise<Slide[]> 
     If you use the "image" slide type, you MUST provide an 'imageUrl' property. Construct the URL dynamically using this exact format:
     https://image.pollinations.ai/prompt/{detailed-visual-description}?width=1920&height=1080&nologo=true
     Replace {detailed-visual-description} with a highly descriptive, hyphenated search term (e.g., futuristic-corporate-office-with-blue-lighting).
+
+    EXAMPLE — Given this user input:
+    "Our Q3 results: revenue up 30%, churn down to 2%, 500 new enterprise customers. Key wins: launched mobile app, expanded to APAC, hired 50 engineers."
+
+    You should produce slides like:
+    [
+      {"type":"main","title":"Q3 Performance Review","subtitle":"Record-breaking growth across all key metrics"},
+      {"type":"secondary_point","title":"Key Achievements","items":["Revenue grew 30% quarter-over-quarter, exceeding all forecasts","Customer churn dropped to a historic low of just 2%","Onboarded 500 new enterprise customers in a single quarter","Successfully launched the mobile application to general availability","Expanded operations into the Asia-Pacific market","Engineering team scaled up with 50 new hires"]},
+      {"type":"table","title":"Q3 Metrics at a Glance","headers":["Metric","Q2 Baseline","Q3 Result","Change"],"rows":[["Revenue Growth","Baseline","30% increase","+30%"],["Churn Rate","4.5%","2.0%","-2.5pp"],["New Customers","310","500","+61%"]]},
+      {"type":"end","title":"Looking Ahead to Q4","subtitle":"Building on momentum — targeting 40% revenue growth and EMEA expansion"}
+    ]
   `;
 
     const schema = {
