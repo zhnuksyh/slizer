@@ -56,5 +56,6 @@ Slydex is a modern, responsive web application that leverages the Gemini API to 
 
 ## 📜 Recent Updates
 <!-- CHANGELOG START -->
+- **2026-03-05** (d25dd4e): docs: create comprehensive README.md
 - Initial Setup
 <!-- CHANGELOG END -->
