@@ -42,6 +42,14 @@ export const generateSlidesFromAI = async (inputText: string): Promise<Slide[]> 
 
     SPEAKER NOTES:
     For EVERY slide, include a "notes" field with 1-2 sentences of speaker talking points. These should help the presenter know what to say, not just repeat the slide content.
+
+    CONTENT QUALITY RULES:
+    - Generate at least 5 slides, even for short inputs. Expand on the topic if needed.
+    - Subtitles must be full, descriptive sentences — never just one or two words.
+    - Bullet point items must be descriptive phrases of at least 8 words, not single words or short fragments.
+    - Table cells should contain real, specific data — never use placeholders like "TBD" or "N/A".
+    - Every slide must look complete and professional — no empty or nearly empty slides.
+    - Write in a clear, confident, professional tone suitable for business presentations.
   `;
 
     const schema = {
