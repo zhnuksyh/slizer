@@ -56,6 +56,7 @@ Slydex is a modern, responsive web application that leverages the Gemini API to 
 
 ## 📜 Recent Updates
 <!-- CHANGELOG START -->
+- **2026-03-05** (9aa03fb): fix: switch image slides to stable picsum API and enforce text truncation on slides
 - **2026-03-05** (7cb93d1): fix: update pollinations API host from image.pollinations.ai to pollinations.ai/p
 - **2026-03-05** (6c2bdde): fix: add image slide to few-shot example in aiService prompt
 - **2026-03-05** (24d52d2): fix: resolve infinite render loop in ApiUsageMonitor
